@@ -1,0 +1,11 @@
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# قاعدة مهمة جداً لتطبيقات SPA (React)
+# تقوم بتحويل أي طلب رابط إلى index.html ليتولى React Router (أو التطبيق) الأمر
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -1,0 +1,8 @@
+{
+  "name": "Dental Brain",
+  "description": "منصة تعليمية متطورة تحول المفاهيم النظرية في طب الأسنان إلى محاكاة بصرية واقعية وخطوات سريرية عملية باستخدام ذكاء نانو بنانا.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
