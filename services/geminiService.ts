@@ -320,7 +320,7 @@ export const analyzeDentalImage = async (base64Image: string): Promise<ImageAnal
 
 // Image Generation
 export const generateRealisticDentalImage = async (prompt: string, type: 'CLINICAL' | 'RADIOLOGY' | 'EXPLODED' = 'CLINICAL') => {
-  const modelsToTry = ['gemini-1.5-flash'];
+  const modelsToTry = [gemini-1.5-flash-latest];
   
   try {
     return await withModelFallback(async (modelName, apiKey) => {
