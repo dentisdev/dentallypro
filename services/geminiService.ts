@@ -3,7 +3,7 @@ import { ImageAnalysisResult, ClinicalData } from "../types";
 
 // Helper to safely get the API key from process.env
 const getApiKey = (): string | undefined => {
-    return process.env.API_KEY;
+    return import.meta.env.VITE_API_KEY;
 };
 
 // Helper to determine if we should retry based on the error
@@ -40,7 +40,7 @@ const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 // Helper for trying multiple models
 async function withModelFallback<T>(
     operation: (model: string, apiKey: string) => Promise<T>, 
-    models: string[] = ['gemini-2.5-flash', 'gemini-3-flash-preview']
+    models: string[] = ['gemini-1.5-flash']
 ): Promise<T> {
     const apiKey = getApiKey();
     
