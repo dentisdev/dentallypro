@@ -40,7 +40,7 @@ const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 // Helper for trying multiple models
 async function withModelFallback<T>(
     operation: (model: string, apiKey: string) => Promise<T>, 
-    models: string[] = ['gemini-1.5-flash']
+    models: string[] = ['gemini-1.5-flash-latest']
 ): Promise<T> {
     const apiKey = getApiKey();
     
